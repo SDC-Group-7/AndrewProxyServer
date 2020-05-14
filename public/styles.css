@@ -1,0 +1,19 @@
+#gallery {
+    margin: 0 auto;
+    width: 890px;
+    height : 100%;
+}
+
+#product {
+    margin: 0 auto; 
+    width: 395px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    display: flex;
+}
