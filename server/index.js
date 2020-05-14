@@ -57,24 +57,26 @@ app.put('/api/products/:productId/reviews/:reviewId', (req, res) => {
 });
 
 // Product API
-app.get('product/:productId', (req, res) => {
+app.get('/product/:productId', (req, res) => {
     const productId = req.params.productId;
-    const apiUrl = `http://localhost:3000/api/product/${productId}`;
+    const apiUrl = `http://localhost:3002/product/${productId}`;
+
     fetch(apiUrl)
-      .then((result) => result.json())
+      .then((response) => response.json())
       .then((json) => res.json(json))
       .catch((err) => console.error(err));
 });
 
-app.get('product/:productId/find-store', (req, res) => {
+app.get('/product/:productId/find-store', (req, res) => {
     const productId = req.params.productId;
-    const apiUrl = `http://localhost:3000/api/product/${productId}/find-store`;
+    const query = req.query.q;
+    const apiUrl = `http://localhost:3002/product/${productId}/find-store?q=${query}`;
 
     fetch(apiUrl)
-      .then((result) => result.json())
+      .then((response) => response.json())
       .then((json) => res.json(json))
       .catch((err) => console.error(err));
-})
+});
 
 // Gallery API
 app.get('/api/images/:imageId', (req, res) => {
