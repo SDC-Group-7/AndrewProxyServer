@@ -31,7 +31,6 @@ app.get('/api/products/:productId/reviews/:reviewId', (req, res) => {
     const reviewId = req.params.reviewId;
 
     const apiUrl = `${reviewsURL}/api/products/${productId}/reviews/${reviewId}`;
-    console.log(apiUrl)
     fetch(apiUrl)
       .then((result) => (result.json()))
       .then((json) => res.json(json))
