@@ -1,9 +1,9 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
-  "license": "",
+  "name": "reviews-proxy",
+  "version": "1.0.0",
+  "description": "Proxy project to display the lego page",
+  "author": "shoji",
+  "license": "N/A",
   "engines": {
     "node": ">=6.13.0"
   },
